@@ -45,6 +45,12 @@ import jakarta.validation.constraints.Size;
 		@JsonIgnoreProperties("Produto")
 		private Categoria categoria;
 		
+		@ManyToOne
+		@JsonIgnoreProperties("Produto")
+		private Usuario usuario;
+		
+		
+		
 		@UpdateTimestamp
 		private LocalDateTime data;
 
@@ -97,6 +103,18 @@ import jakarta.validation.constraints.Size;
 		public void setData(LocalDateTime data) {
 			this.data = data;
 		}
+
+
+		public Usuario getUsuario() {
+			return usuario;
+		}
+
+
+		public void setUsuario(Usuario usuario) {
+			this.usuario = usuario;
+		}
+		
+		
 }
 
 	
